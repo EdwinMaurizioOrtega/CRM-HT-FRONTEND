@@ -108,13 +108,13 @@ const Layout = (props) => {
             <Head>
                 <title>CRM | HT BUSINESS</title>
                 <meta charSet="UTF-8" />
-                <meta name="description" content="The ultimate collection of design-agnostic, flexible and accessible React UI Components." />
+                <meta name="description" content="Nuestro CRM Local permite administrar y analizar las interacciones de órdenes de compra y clientes, para optimizar la rentabilidad, aumentar las ventas de nuevos clientes; complementándose con el sistema de facturación SAP y aplicaciones; utilizando las tecnologías más actuales en desarrollo." />
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="initial-scale=1, width=device-width" />
                 <meta property="og:type" content="website"></meta>
-                <meta property="og:title" content="Sakai by PrimeReact | Free Admin Template for NextJS"></meta>
+                <meta property="og:title" content="CRM | HT BUSINESS by Lidenar"></meta>
                 <meta property="og:url" content="https://www.primefaces.org/sakai-react"></meta>
-                <meta property="og:description" content="The ultimate collection of design-agnostic, flexible and accessible React UI Components." />
+                <meta property="og:description" content="Nuestro CRM Local permite administrar y analizar las interacciones de órdenes de compra y clientes, para optimizar la rentabilidad, aumentar las ventas de nuevos clientes; complementándose con el sistema de facturación SAP y aplicaciones; utilizando las tecnologías más actuales en desarrollo." />
                 <meta property="og:image" content="https://www.primefaces.org/static/social/sakai-nextjs.png"></meta>
                 <meta property="og:ttl" content="604800"></meta>
                 <link rel="icon" href={`${contextPath}/favicon.ico`} type="image/x-icon"></link>
