@@ -118,7 +118,7 @@ const Layout = (props) => {
                 <meta property="og:image" content="https://www.primefaces.org/static/social/sakai-nextjs.png"></meta>
                 <meta property="og:ttl" content="604800"></meta>
                 <link rel="icon" href={`${contextPath}/favicon.ico`} type="image/x-icon"></link>
-                <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+
             </Head>
 
             <div className={containerClass}>
