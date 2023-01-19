@@ -25,7 +25,7 @@ const Dashboard = () => {
 
             //PAC
             console.log("Buscando en el sistema Facturacion PAC")
-            const responsePac = await fetch("https://crm.hipertronics.us/api/tutorials/buscarimei/"+enteredName, {
+            const responsePac = await fetch("https://crm.hipertronics.us/api/crm-ht/buscarimei/"+enteredName, {
                 method: "GET"
 
             }).then(responseP => responseP)
@@ -42,26 +42,18 @@ const Dashboard = () => {
             //Departamento de servicio tecnico
 
             //PAC
-            // console.log("Buscando en el sistema Facturacion PAC")
-            // const validacionImei = await fetch("http://191.100.22.203:3002/grunsoft/rest/movilmv/buscar_only_imei_st", {
-            //     method: "POST", headers: {
-            //         "Content-Type": "application/json", "Accept": "application/json",
-            //     }, body: JSON.stringify({
-            //         mensaje: `${enteredName}`
-            //     })
-            //
-            // }).then(response => response.json())
-            //
-            // console.log("Validacion Imei: " + validacionImei.validacion);
-            // setLogitech(validacionImei.validacion)
+            console.log("Buscando en el sistema Facturacion PAC")
+            const validacionImei = await fetch("https://crm.hipertronics.us/api/crm-ht/logitech/"+enteredName, {
+                method: "GET"
 
-            //Creamos un JSON
-            //var objValidacion = new Object();
+            }).then(response => response)
 
-            // var stringV = JSON.stringify(validacionImei);
-            // console.log(stringV);
-            // var objV2 = JSON.parse(stringV);
-            // console.log(objV2.validacion);
+            console.log("Status 200: " + validacionImei.status)
+
+            let jsonVal = await validacionImei.json();
+            setLogitech(jsonVal.validacion)
+
+
         } else {
             toast.current.show({severity: 'error', summary: 'Mensaje de error', detail: 'El IMEI debe tener 15 dígitos.', life: 3000});
 
