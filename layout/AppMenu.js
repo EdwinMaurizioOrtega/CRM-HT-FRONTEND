@@ -13,7 +13,7 @@ const AppMenu = () => {
             label: 'Servicio Técnico',
             items: [
                 {label: 'Consultar garantia', icon: 'pi pi-fw pi-home', to: '/'},
-                {label: 'Consultar orden', icon: 'pi pi-fw pi-home', to: '/uikit/input'}
+                // {label: 'Consultar orden', icon: 'pi pi-fw pi-home', to: '/uikit/input'}
             ]
         }
     ];
