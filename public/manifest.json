@@ -1,11 +1,11 @@
 {
-    "theme_color": "#000000",
-    "background_color": "#000000",
-    "display": "standalone",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "fullscreen",
     "scope": "/",
     "start_url": "/",
     "name": "CRM HT BUSINESS",
-    "short_name": "HT",
+    "short_name": "CRM HT",
     "description": "Nuestro CRM Local permite administrar y analizar las interacciones de \u00f3rdenes de compra y clientes, para optimizar la rentabilidad, aumentar las ventas de nuevos clientes; complement\u00e1ndose con el sistema de factu- raci\u00f3n SAP y aplicaciones; utilizando las tecnolog\u00edas m\u00e1s actuales en desarrollo.",
     "icons": [
         {
@@ -27,6 +27,12 @@
             "src": "/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+            "src": "/maskable_icon.png",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ]
 }
