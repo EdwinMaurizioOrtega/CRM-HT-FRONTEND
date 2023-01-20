@@ -12,6 +12,8 @@ const Dashboard = () => {
     const [garantia, setGarantia] = useState('');
     const [logitech, setLogitech] = useState('')
 
+    const [marca, setMarca] = useState('');
+
     const toast = useRef(null);
 
     // const [getPosts, {data, loading, error}] = useLazyQuery(GET_GARANTIA_IMEI_DATA);
@@ -25,25 +27,25 @@ const Dashboard = () => {
 
             //PAC
             console.log("Buscando en el sistema Facturacion PAC")
-            const responsePac = await fetch("https://crm.hipertronics.us/api/crm-ht/buscarimei/"+enteredName, {
+            const responseFull = await fetch("https://crm.hipertronics.us/api/crm-ht/buscarimei/" + enteredName, {
                 method: "GET"
 
             }).then(responseP => responseP)
 
-            console.log(responsePac)
+            console.log(responseFull)
 
-            console.log("Status 200: " + responsePac.status)
-            let jsonPac = await responsePac.json();
+            console.log("Status 200: " + responseFull.status)
+            let jsonFull = await responseFull.json();
 
 
             //Retornamos el objeto
-            setGarantia(jsonPac.message)
+            setGarantia(jsonFull.message);
+            setMarca(jsonFull.marca);
 
-            //Departamento de servicio tecnico
 
-            //PAC
-            console.log("Buscando en el sistema Facturacion PAC")
-            const validacionImei = await fetch("https://crm.hipertronics.us/api/crm-ht/logitech/"+enteredName, {
+            //Departamento IMEIs de Logitech
+            console.log("Buscando en el cloud CRM HT.")
+            const validacionImei = await fetch("https://crm.hipertronics.us/api/crm-ht/logitech/" + enteredName, {
                 method: "GET"
 
             }).then(response => response)
@@ -103,22 +105,37 @@ const Dashboard = () => {
                             <span>
                                 Av. de las Américas 309 y José Mejía Lequerica, Guayaquil – Ecuador
                             </span>
-                        </div>) : (<div className="align-content-center">
-
-                        {/*    <img src={`${contextPath}/layout/images/bit.jpeg`} alt="Sakai Logo" height="50" className="mr-0 lg:mr-2"/>*/}
-                        {/*    <br></br>*/}
-                        {/*    <span>*/}
-                        {/*        Teléfonos de contacto: +593 99 110 5322  / +593 98 119 3615</span> <br></br>*/}
-                        {/*    <span>*/}
-                        {/*    Cuenca*/}
-                        {/*    Luis Cordero 10-32 y Gran Colombia,*/}
-                        {/*    Guayaquil.*/}
-                        {/*    Francisco de Orellana y A. Bordes Najera.*/}
-                        {/*</span>*/}
-                            </div>)
-
+                        </div>) : (<div className="align-content-center"></div>)
                         }
 
+                        {marca == 'SAMSUNG' ? (<div className="align-content-center">
+
+                            <img src={`${contextPath}/layout/images/bit.jpeg`} alt="Sakai Logo" height="50" className="mr-0 lg:mr-2"/>
+                            <br></br>
+                            <span>
+                                    Teléfonos de contacto: +593 99 110 5322  / +593 98 119 3615</span> <br></br>
+                            <span>
+                                Cuenca
+                                Luis Cordero 10-32 y Gran Colombia,
+                                Guayaquil.
+                                Francisco de Orellana y A. Bordes Najera.
+                            </span>
+                        </div>) : (<div className="align-content-center">
+
+
+                            <img src={`${contextPath}/layout/images/lidenar.jpeg`} alt="Sakai Logo" height="50" className="mr-0 lg:mr-2"/>
+                            <br></br>
+                            <span>
+                                Alejandra Logroño
+                            </span>
+                            <br></br>
+                            <span>
+                                Contacto: 0992232222
+                                Dirección: Cuenca - Padre Aguirre 9-68 y Gran colombia.
+                                Email: asistente@hipertronics.us
+                            </span>
+                        </div>)
+                        }
 
                     </div>
 
