@@ -106,6 +106,7 @@ const Layout = (props) => {
     return (
         <React.Fragment>
             <Head>
+                <link rel="manifest" href="/manifest.json" />
                 <title>CRM | HT BUSINESS</title>
                 <meta charSet="UTF-8" />
                 <meta name="description" content="Nuestro CRM Local permite administrar y analizar las interacciones de órdenes de compra y clientes, para optimizar la rentabilidad, aumentar las ventas de nuevos clientes; complementándose con el sistema de facturación SAP y aplicaciones; utilizando las tecnologías más actuales en desarrollo." />
