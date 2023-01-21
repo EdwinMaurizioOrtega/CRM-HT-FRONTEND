@@ -27,7 +27,7 @@ const Dashboard = () => {
 
             //PAC
             console.log("Buscando en el sistema Facturacion PAC")
-            const responseFull = await fetch("https://crm.hipertronics.us/api/crm-ht/buscarimei/" + enteredName, {
+            const responseFull = await fetch("https://crm.hipertronics.us/api/crm-ht/garantia_imei_pac_sap?id=" + enteredName, {
                 method: "GET"
 
             }).then(responseP => responseP)
@@ -45,7 +45,7 @@ const Dashboard = () => {
 
             //Departamento IMEIs de Logitech
             console.log("Buscando en el cloud CRM HT.")
-            const validacionImei = await fetch("https://crm.hipertronics.us/api/crm-ht/logitech/" + enteredName, {
+            const validacionImei = await fetch("https://crm.hipertronics.us/api/crm-ht/logitech?description=" + enteredName, {
                 method: "GET"
 
             }).then(response => response)
