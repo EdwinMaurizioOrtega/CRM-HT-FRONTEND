@@ -105,36 +105,36 @@ const Dashboard = () => {
                             <span>
                                 Av. de las Américas 309 y José Mejía Lequerica, Guayaquil – Ecuador
                             </span>
-                        </div>) : (<div className="align-content-center"></div>)
-                        }
+                        </div>) : (
 
-                        {marca == 'SAMSUNG' ? (<div className="align-content-center">
+                            marca == 'SAMSUNG' ? (<div className="align-content-center">
 
-                            <img src={`${contextPath}/layout/images/bit.jpeg`} alt="Sakai Logo" height="50" className="mr-0 lg:mr-2"/>
-                            <br></br>
-                            <span>
+                                <img src={`${contextPath}/layout/images/bit.jpeg`} alt="Sakai Logo" height="50" className="mr-0 lg:mr-2"/>
+                                <br></br>
+                                <span>
                                     Teléfonos de contacto: +593 99 110 5322  / +593 98 119 3615</span> <br></br>
-                            <span>
+                                <span>
                                 Cuenca
                                 Luis Cordero 10-32 y Gran Colombia,
                                 Guayaquil.
                                 Francisco de Orellana y A. Bordes Najera.
                             </span>
-                        </div>) : (<div className="align-content-center">
+                            </div>) : (<div className="align-content-center">
 
-
-                            <img src={`${contextPath}/layout/images/lidenar.jpeg`} alt="Sakai Logo" height="50" className="mr-0 lg:mr-2"/>
-                            <br></br>
-                            <span>
+                                <img src={`${contextPath}/layout/images/lidenar.jpeg`} alt="Sakai Logo" height="50" className="mr-0 lg:mr-2"/>
+                                <br></br>
+                                <span>
                                 Alejandra Logroño
                             </span>
-                            <br></br>
-                            <span>
+                                <br></br>
+                                <span>
                                 Contacto: 0992232222
                                 Dirección: Cuenca - Padre Aguirre 9-68 y Gran colombia.
                                 Email: asistente@hipertronics.us
                             </span>
-                        </div>)
+                            </div>)
+
+                        )
                         }
 
                     </div>
