@@ -1,5 +1,5 @@
 import getConfig from 'next/config';
-import { useRouter } from 'next/router';
+//import { useRouter } from 'next/router';
 import React, { useContext, useState } from 'react';
 import AppConfig from '../../../layout/AppConfig';
 import { Checkbox } from 'primereact/checkbox';
@@ -14,7 +14,7 @@ const LoginPage = () => {
     const [checked, setChecked] = useState(false);
     const { layoutConfig } = useContext(LayoutContext);
     const contextPath = getConfig().publicRuntimeConfig.contextPath;
-    const router = useRouter();
+    //const router = useRouter();
     const containerClassName = classNames('surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden', {'p-input-filled': layoutConfig.inputStyle === 'filled'});
 
     return (
@@ -51,7 +51,8 @@ const LoginPage = () => {
                                     Forgot password?
                                 </a>
                             </div>
-                            <Button label="Sign In" className="w-full p-3 text-xl" onClick={() => router.push('/')}></Button>
+                            {/*<Button label="Sign In" className="w-full p-3 text-xl" onClick={() => router.push('/')}></Button>*/}
+                            <Button label="Sign In" className="w-full p-3 text-xl" ></Button>
                         </div>
                     </div>
                 </div>

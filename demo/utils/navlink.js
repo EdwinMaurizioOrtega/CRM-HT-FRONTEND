@@ -24,7 +24,7 @@ function NavLink({ href, exact, children, role, target, ariaLabel, ...props }) {
     }
 
     return (
-        <Link href={href} role={role} target={target}>
+        <Link legacyBehavior href={href} role={role} target={target}>
             <a aria-label={ariaLabel} {...props}>
                 {children}
             </a>
